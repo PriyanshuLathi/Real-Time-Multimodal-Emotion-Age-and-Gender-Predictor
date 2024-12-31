@@ -2,10 +2,10 @@
 
 ## Overview
 
-The **Real Time Multimodal Emotion,Age and Gender Predictor** is a machine-learning-powered web application that performs real-time analysis of facial and audio inputs. It is capable of:
+The **Real-Time Multimodal Emotion, Age and Gender Predictor** is a machine-learning-powered web application that performs real-time analysis of facial and audio inputs. It is capable of:
 
-1. Detecting facial emotions such as happiness, sadness, and anger from live webcam feeds.
-2. Predicting a person’s age and gender from facial images.
+1. Detecting facial emotions like happiness, sadness, and anger from live webcam feeds.
+2. Predicting a person's age and gender from facial images.
 3. Recognizing emotions from speech inputs using audio data.
 
 The application combines multiple machine learning models to provide seamless and accurate predictions via an interactive and responsive web interface.
@@ -18,7 +18,7 @@ The primary aim of this project is to integrate and deploy multi-modal machine l
 
 The **Real-Time Multi-Model Emotion and Age Predictor** is a Flask-based web application designed to perform three core functionalities:
 
-1. Detect facial emotions (e.g., happy, sad, angry) from live webcam feed.
+1. Detect facial emotions (e.g., happy, sad, angry) from a live webcam feed.
 2. Recognize emotions from speech inputs.
 3. Predict a person's age and gender using facial images.
 
@@ -27,19 +27,25 @@ This project combines cutting-edge machine learning models for image and audio p
 ## Dataset Description
 
 - **Face Expression Recognition Dataset (Kaggle)**:
+  Contains folders for different facial expressions: Surprise, Anger, Happiness, Sad, Neutral, Disgust, and Fear.
 
-  - Contains 35,887 grayscale, 48x48 pixel images of faces labeled with seven emotion categories: **Angry**, **Disgust**, **Fear**, **Happy**, **Sad**, **Surprise**, and **Neutral**.
+  - Contains 48x48 pixel images of faces labeled with seven emotion categories: **Angry**, **Disgust**, **Fear**, **Happy**, **Sad**, **Surprise**, and **Neutral**.
+  - The dataset is split into Training (28,079 samples) and Testing (7,178 samples) sets of grayscale images.
   - Used to train the CNN model for facial emotion recognition.
   - [Dataset Link](https://www.kaggle.com/datasets/apollo2506/facial-recognition-dataset)
 
 - **RAVDESS Dataset**:
 
-  - The Ryerson Audio-Visual Database of Emotional Speech and Song, consisting of 7356 files.
+  - Contains 1,440 files with 60 trials per actor x 24 actors (12 male, 12 female).
+  - Features speech emotions such as Calm, Happy, Sad, Angry, Fearful, Surprised, and Disgust.
+  - Each emotion is produced at two intensity levels: Normal and Strong, along with a Neutral expression.
   - Audio spectrograms were extracted using the **Librosa** library for speech emotion recognition.
   - [Dataset Link](https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio)
 
 - **UTKFace Dataset**:
   - A large-scale dataset containing over 20,000 images of faces, with annotations for age, gender, and ethnicity.
+  - Images vary in pose, expression, illumination, and resolution.
+  - This dataset is ideal for face detection, age estimation, age progression/regression, and landmark localization.
   - Used for training the age and gender prediction model.
   - [Dataset Link](https://www.kaggle.com/datasets/jangedoo/utkface-new)
 
@@ -57,7 +63,7 @@ This project combines cutting-edge machine learning models for image and audio p
 - **Speech Emotion Recognition**:
   - Feature extraction using spectrograms, followed by model training, achieving an accuracy of 89%.
 - **Age and Gender Prediction**:
-  - Deep learning model trained on the UTKFace dataset with 76.8% accuracy.
+  - A deep learning model was trained on the UTKFace dataset with 76.8% accuracy.
 
 ### 3. Web App Development
 
@@ -80,7 +86,7 @@ This project combines cutting-edge machine learning models for image and audio p
 
 ## Further Scope for Improvement
 
-- Enhance the facial emotion detection model by using larger and more diverse datasets.
+- Enhance the facial emotion detection model using larger and more diverse datasets.
 - Implement real-time feedback on model predictions to improve user interaction.
 - Integrate more advanced architectures like transformers or pre-trained models (e.g., ResNet, VGG).
 - Optimize app performance for lower latency on live predictions.
